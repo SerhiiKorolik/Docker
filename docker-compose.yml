@@ -1,0 +1,28 @@
+version: "2"
+services:
+
+    app1:
+        build: .
+        image: app1:latest
+        ports:
+            - 8080:8080
+
+    app2:
+        build: .
+        image: app2:latest
+        ports:
+            - 8081:8080
+
+    db:
+        build: ./mysql
+        ports:
+            - 3306:3306
+        volumes:
+            - /storage/docker/mysql-datadir:/var/lib/mysql
+
+    
+    balancer:
+        build: ./Apache
+        ports: 
+            - 80:80
+
