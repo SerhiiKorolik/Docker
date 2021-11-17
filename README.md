@@ -1,4 +1,5 @@
 # The structure should be like this:
+```
 -docker/
     -docker-compose.yml
     -Dockerfile
@@ -11,3 +12,4 @@
         -CreateDB.sql
         -Dockerfile
         -run_db.sh
+```
